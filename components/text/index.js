@@ -1,0 +1,1 @@
+export { StyledText as default } from './index.styles'
