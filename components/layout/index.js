@@ -14,7 +14,7 @@ import Container from "../container";
 const NAV_ITEMS = [
   {
     title: "О себе",
-    startIndex: 1,
+    startIndex: 0,
     emoji: "👨🏼‍💻",
   },
   {
@@ -25,16 +25,16 @@ const NAV_ITEMS = [
   {
     title: "Hard Skills",
     startIndex: 7,
-    emoji: "💻",
+    emoji: "📚",
   },
   {
     title: "Публичный портрет",
-    startIndex: 10,
+    startIndex: 9,
     emoji: "🖼️",
   },
   {
     title: "Пасхалки",
-    startIndex: 14,
+    startIndex: 13,
     emoji: "🎁",
   },
   {
@@ -47,7 +47,7 @@ const NAV_ITEMS = [
 export default ({ children }) => {
   const state = useDeck();
 
-  const showNav = state.index > 0 && state.index < state.slides.length - 1;
+  const showNav = state.index > 0;
 
   return (
     <ThemeProvider theme={theme}>
@@ -70,6 +70,7 @@ export default ({ children }) => {
           </StyledNavContainer>
         )}
       </StyledWrapper>
+
     </ThemeProvider>
   );
 };

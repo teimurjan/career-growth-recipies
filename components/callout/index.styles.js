@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 import Card from "../card";
 
@@ -10,6 +10,7 @@ export const StyledEmoji = styled.div`
 `;
 
 export const StyledCard = styled(Card)`
-  width: 1000px;
+  max-width: 1400px;
+  min-width: 1200px;
   padding-left: 4.5rem;
 `;

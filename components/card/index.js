@@ -1,1 +1,1 @@
-export { StyledCard as default } from './index.styles'
+export { StyledCard as default } from "./index.styles";

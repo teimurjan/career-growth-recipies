@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 export const StyledWrapper = styled.div`
   display: flex;
@@ -26,10 +26,10 @@ export const StyledControl = styled.div`
 
 export const StyledPrependWrapper = styled.div`
   margin-right: 1rem;
-  font-size: 42px;
+  font-size: 5rem;
 `;
 
 export const StyledAppendWrapper = styled.div`
   margin-left: 1rem;
-  font-size: 42px;
+  font-size: 5rem;
 `;
