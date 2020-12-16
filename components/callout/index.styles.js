@@ -10,7 +10,7 @@ export const StyledEmoji = styled.div`
 `;
 
 export const StyledCard = styled(Card)`
-  max-width: 1400px;
-  min-width: 1200px;
-  padding-left: 4.5rem;
+  width: 1400px;
+  max-width: 100%;
+  padding-left: 5rem;
 `;

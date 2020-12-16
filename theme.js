@@ -9,6 +9,7 @@ export default {
     text: "#ede0ed",
     background: "#11133c",
     lightBackground: "#1c1450",
+    border: "#242754",
     primary: "#ff5780",
     secondary: "#3fca77",
   },

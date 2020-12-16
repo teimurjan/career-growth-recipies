@@ -1,25 +1,21 @@
 import "react-simple-flex-grid/lib/main.css";
 
 import { Row, Col } from "react-simple-flex-grid";
-import { Linkedin, GitHub, Plus, File, MessageCircle } from "react-feather";
 
-import Callout from "./components/callout";
-import Card from "./components/card";
-import CardTab from "./components/card-tab";
-import CardsTabs from "./components/cards-tabs";
-import EasterEggs from "./components/easter-eggs";
-import FadeIn from "./components/fade-in";
-import Flex from "./components/flex";
-import IconCard from "./components/icon-card";
+import About from "./organisms/about";
+import ComputerScience from "./organisms/computer-science";
+import Conclusion from "./organisms/conclusion";
+import Contact from "./organisms/contact";
+import EasterEggs from "./organisms/easter-eggs";
+import HardSkills from "./organisms/hard-skills";
+import PublicPortrait from "./organisms/public-portrait";
+import SoftSkills from "./organisms/soft-skills";
+
 import Layout from "./components/layout";
 import Matrix from "./components/matrix";
-import Picture from "./components/picture";
 import Progress from "./components/progress";
-import Text from "./components/text";
 
 import customTheme from "./theme";
-
-import cleanCodeBookImg from "./images/clean-code-book.jpg";
 
 export const theme = customTheme;
 
@@ -37,10 +33,7 @@ export const theme = customTheme;
 
 # О себе
 
-- Возраст: 23 года.
-- Страна: Кыргызстан.
-- Позиция: Senior Frontend Engineer в Toptal.
-- Опыт работы: 5 лет.
+<About />
 
 </Layout>
 
@@ -62,21 +55,7 @@ export const theme = customTheme;
 
 # Soft skills
 
-<Callout emoji="💡">
-  Soft skills - это нетехнические навыки, влияющие на работу. Они включают в
-  себя:{" "}
-  <Text color="secondary" bold>
-    взаимодействие с коллегами
-  </Text>
-  , <Text color="secondary" bold>
-    подходы к решению проблем
-  </Text>, <Text color="secondary" bold>
-    организацию труда
-  </Text>.
-</Callout>
-
-IT в 2020 - это не о 8 часах непрерывного кодинга.
-Это о сбалансированном комплексе технических и нетехнических навыков.
+<SoftSkills />
 
 </Layout>
 
@@ -136,77 +115,14 @@ IT в 2020 - это не о 8 часах непрерывного кодинга
 
 # Hard skills
 
-<Callout emoji="💡">
-  Hard skills - это обучаемые и измеримые способности. В случае, если вы
-  веб-разработчик - это навыки создания веб-приложений, если аналитик - умение
-  прогнозировать и оценивать.
-</Callout>
-
-Количество направлений, языков программироания и инструментов растет изо дня в день. Важно выбрать то, что подходит именно вам.
+<HardSkills />
 
 </Layout>
 
 ---
 
 <Layout>
-  <FadeIn delay={2000}>
-    <CardsTabs style={{ height: 625 }}>
-      <CardTab title="Языки программирования">
-        Языки низкого уровня - производительны и максимально приближенными к
-        машинному коду. Высокоуровневые языки - более удобны и просты в
-        использовании.
-        <br />
-        <br />
-        Погружение с высокого уровня в низкий будет <Text
-          color="secondary"
-          bold
-        >
-          равномерным и в меру ускоренным
-        </Text>. Начинать с низкого уровня не советую никому.
-      </CardTab>
-      <CardTab title="Алгоритмы и структуры данных">
-        Структуры данных и алгоритмы - фундаментальные знания необходимые
-        каждому высококлассному инженеру.
-        <br />
-        <br />
-        Изучение на ранних этапах карьеры <Text color="secondary" bold>
-          развивает аналитическое мышление
-        </Text>, <Text color="secondary" bold>
-          преумножает шансы на собеседованиях
-        </Text>, а также позволяет <Text color="secondary" bold>
-          избегать ненужных проблем с производительностью
-        </Text>.
-      </CardTab>
-      <CardTab title="Чистый код">
-        <Row gutter={40}>
-          <Col span={3}>
-            <Picture width="100%" src={cleanCodeBookImg} />
-          </Col>
-          <Col style={{ position: "relative" }} span={9}>
-            Чистый код нужен точно также как этикет в обществе. Его принципам
-            должен следовать каждый, кто называет себя специалистом в IT.
-            <br />
-            <br />В награду за написание чистого кода вы получите:{" "}
-            <Text color="secondary" bold>
-              признательность коллег
-            </Text>
-            , <Text color="secondary" bold>
-              экономию времени == денег
-            </Text>, <Text color="secondary" bold>
-              уверенность в качестве выполненной работы
-            </Text>.
-            <br />
-            <br />
-            ℹ️ Рекомендация к прочтению:{" "}
-            <Text bold>
-              Clean Code: A Handbook of Agile Software Craftsmanship
-            </Text>
-            .
-          </Col>
-        </Row>
-      </CardTab>
-    </CardsTabs>
-  </FadeIn>
+  <ComputerScience />
 </Layout>
 
 <Matrix
@@ -218,27 +134,9 @@ IT в 2020 - это не о 8 часах непрерывного кодинга
 
 <Layout>
 
-# Публичный портрет
+# Личный бренд
 
-<Flex alignItems="center" justifyContent="space-between">
-  <IconCard
-    icon={<Linkedin size={100} color="#fff" />}
-    alt="LinkedIn"
-    backgroundColor="#2D64BC"
-  />
-  <Plus size={80} />
-  <IconCard
-    icon={<GitHub size={100} color="#000" />}
-    alt="GitHub"
-    backgroundColor="#fff"
-  />
-  <Plus size={80} />
-  <IconCard
-    icon={<MessageCircle size={100} color="#fff" />}
-    alt="Конференции"
-    backgroundColor="#3fca77"
-  />
-</Flex>
+<PublicPortrait />
 
 </Layout>
 
@@ -318,14 +216,12 @@ IT в 2020 - это не о 8 часах непрерывного кодинга
 
 # Заключение
 
-<Callout emoji="💡">
-  Карьерный рост в IT зависит{" "}
-  <Text color="secondary" bold>
-    только от вас
-  </Text>
-  . Следуя вышесказанным рекомендациям, вы не просто будете подниматься по карьерной
-  лестнице, вы будете расти и становиться профессионалом в своей области. Рано или
-  поздно ваши старания принесут плоды и вы достигнете желаемого результата.
-</Callout>
+<Conclusion />
 
+</Layout>
+
+---
+
+<Layout>
+  <Contact /> 
 </Layout>

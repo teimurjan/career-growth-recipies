@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default ({ delay, active } = {}) => {
+export default ({ delay, active, onComplete } = {}) => {
   const [opacity, setOpacity] = useState(0);
 
   useEffect(() => {
@@ -10,6 +10,7 @@ export default ({ delay, active } = {}) => {
 
     const timeoutId = setTimeout(() => {
       setOpacity(1);
+      onComplete && onComplete();
     }, delay);
 
     return () => clearTimeout(timeoutId);
