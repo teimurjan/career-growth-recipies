@@ -6,6 +6,8 @@ export default ({ children, delay, onComplete }) => {
   const style = useFadeIn({ delay, onComplete });
 
   return React.Children.map(children, (child) =>
-    React.cloneElement(child, { style })
+    React.cloneElement(child, {
+      style: { ...(child.props.style || {}), ...style },
+    })
   );
 };

@@ -7,7 +7,7 @@ import Text from "../text";
 export default ({ className, children: _, title, active }) => (
   <StyledCard className={className} color={active ? "primary" : undefined}>
     {title && (
-      <Text as="h3" align="center" bold>
+      <Text as="h4" align="center" bold>
         {title}
       </Text>
     )}

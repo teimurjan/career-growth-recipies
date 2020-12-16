@@ -1,9 +1,12 @@
 import React, { memo } from "react";
+
 import _ from "lodash";
 import { ThemeProvider } from "styled-components";
 
 import { StyledWrapper, StyledColumn } from "./index.styles";
+
 import MatrixChar from "../matrix-char";
+
 import theme from "../../theme";
 
 export default memo(

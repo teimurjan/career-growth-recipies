@@ -3,7 +3,7 @@ import { Row, Col } from "react-simple-flex-grid";
 import { useSteps, useDeck } from "mdx-deck";
 
 import CardTab from "../../components/card-tab";
-import CardsTabs from "../../components/cards-tabs";
+import CardTabs from "../../components/card-tabs";
 import FadeIn from "../../components/fade-in";
 import Picture from "../../components/picture";
 import Text from "../../components/text";
@@ -22,9 +22,15 @@ export default () => {
     }
   }, [freeze, step]);
 
+  const current = freeze ? 0 : step - 1;
+  const isPrintMode = state.mode === "print";
+
   return (
     <FadeIn delay={2000} onComplete={() => setFreeze(false)}>
-      <CardsTabs activeIndex={freeze ? 0 : step - 1} style={{ height: 625 }}>
+      <CardTabs
+        current={isPrintMode ? "all" : current}
+        style={isPrintMode ? undefined : { height: 625 }}
+      >
         <CardTab title="Языки программирования">
           Языки низкого уровня - производительны и максимально приближенными к
           машинному коду. Высокоуровневые языки - более удобны и просты в
@@ -88,7 +94,7 @@ export default () => {
             </Col>
           </Row>
         </CardTab>
-      </CardsTabs>
+      </CardTabs>
     </FadeIn>
   );
 };
