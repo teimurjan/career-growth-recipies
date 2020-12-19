@@ -17,11 +17,5 @@ export default () => (
       alt="GitHub"
       backgroundColor="#fff"
     />
-    <Plus size={80} />
-    <IconCard
-      icon={<MessageCircle size={100} color="#fff" />}
-      alt="Конференции"
-      backgroundColor="#3fca77"
-    />
   </Flex>
 );
