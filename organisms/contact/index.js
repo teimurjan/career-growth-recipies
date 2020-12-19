@@ -24,12 +24,12 @@ export default () => {
         </StyledLinkWrapper>
         <StyledLinkWrapper>
           <GitHub size="3rem" color={theme.colors.primary} />
-          <Link href="https://github.com/teimurjan">github.com/teimurjan</Link>
+          <Link href="https://github.com/teimurjan">https://github.com/teimurjan</Link>
         </StyledLinkWrapper>
         <StyledLinkWrapper>
           <Linkedin size="3rem" color={theme.colors.primary} />
           <Link href="https://linkedin.com/in/teimur-gasanov">
-            linkedin.com/in/teimur-gasanov
+            https://linkedin.com/in/teimur-gasanov
           </Link>
         </StyledLinkWrapper>
         <StyledLinkWrapper>
